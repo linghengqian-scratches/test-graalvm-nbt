@@ -6,6 +6,8 @@
 
 - There is no need to start the built native image, because the startup requires additional parameters. Just observe the build process to reproduce the error log.
 
+- It should be noted that the mainclass `org.apache.shardingsphere.proxy.Bootstrap` has been located in `target/apache-shardingsphere-5.2.1-SNAPSHOT-shardingsphere-proxy-bin/lib/shardingsphere-proxy-bootstrap-5.2.1-SNAPSHOT.jar`
+
 ```shell
 Executing [
 /opt/hostedtoolcache/graalvm-ce-java17-linux/22.2.0/x64/graalvm-ce-java17-22.2.0/bin/java \

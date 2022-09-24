@@ -48,7 +48,6 @@
                             <classpath>
                                 <param>.</param>
                                 <param>target/apache-shardingsphere-5.2.1-SNAPSHOT-shardingsphere-proxy-bin/lib/</param>
-                                <param>target/apache-shardingsphere-5.2.1-SNAPSHOT-shardingsphere-proxy-bin/ext-lib/</param>
                             </classpath>
                             <buildArgs>
                                 <arg>-H:+ReportExceptionStackTraces</arg>
