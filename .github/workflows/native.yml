@@ -1,0 +1,29 @@
+name: GraalVM Native Image Continuous Integration
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    timeout-minutes: 90
+    permissions:
+      contents: read
+      packages: write
+    name: GraalVM Native Image on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v2
+      - uses: graalvm/setup-graalvm@v1
+        with:
+          version: '22.2.0'
+          java-version: '17'
+          components: 'native-image'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          cache: 'maven'
+      - name: Build with Maven
+        run: ./mvnw org.graalvm.buildtools:native-maven-plugin:compile-no-fork -Pnative -DskipTests
