@@ -1,3 +1,5 @@
+# Resolved in https://github.com/apache/shardingsphere/pull/21109
+
 ### Just for test https://github.com/apache/shardingsphere/pull/21109
 
 ## Also, as a validation of https://github.com/graalvm/native-build-tools/issues/213
